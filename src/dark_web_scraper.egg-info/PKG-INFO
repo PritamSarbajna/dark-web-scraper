@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
-Name: py-dark-web-scraper
+Name: dark-web-scraper
 Version: 0.1
 Summary: A dark web link and image scraper
-Home-page: https://github.com/PritamSarbajna/py-dark-web-scraper
+Home-page: https://github.com/PritamSarbajna/dark-web-scraper
 Author: Pritam Sarbajna
 License: UNKNOWN
 Keywords: darkweb,web scraper,scraper

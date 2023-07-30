@@ -5,11 +5,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='py_dark_web_scraper',
+    name='dark_web_scraper',
     version='0.1',
     description='A dark web link and image scraper',
     author= 'Pritam Sarbajna',
-    url = 'https://github.com/PritamSarbajna/py-dark-web-scraper',
+    url = 'https://github.com/PritamSarbajna/dark-web-scraper',
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
     keywords=['darkweb', 'web scraper', 'scraper'],
@@ -19,11 +19,11 @@ setup(
         "Operating System :: POSIX :: Linux",
     ],
     python_requires='>=3.10',
-    py_modules=['py_dark_web_scraper'],
+    py_modules=['dark_web_scraper'],
     package_dir={'':'src'},
     install_requires = [
         'requests',
-        'faskeuser_agent',
+        'fake-useragent',
         'beautifulsoup4'
     ]
 )
