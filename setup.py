@@ -6,10 +6,11 @@ with open("README.md", "r") as fh:
 
 setup(
     name='dark_web_scraper',
-    version='0.1',
+    version='0.3',
     description='A dark web link and image scraper',
     author= 'Pritam Sarbajna',
     url = 'https://github.com/PritamSarbajna/dark-web-scraper',
+    long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
     keywords=['darkweb', 'web scraper', 'scraper'],
