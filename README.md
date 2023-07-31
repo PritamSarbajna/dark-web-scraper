@@ -4,10 +4,10 @@
 <div align="center" >
   
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Kali](https://img.shields.io/badge/Kali-268BEE?style=for-the-badge&logo=kalilinux&logoColor=white)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
+![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white)
 
 </div>
 
@@ -25,14 +25,86 @@
   
 </div>
 
-## Usage :
+## :dart: Usage :
 
 Currently this is only designed to
 - Scrape dark web for onion links
 - Scrape images from dark web
+**Without tor browser**
 
-## Features to be added :
+## :wrench: Current Dependencies:
+- Linux [ used debian based distro ]
+
+# :gear: Prerequisite :
+
+#### Enable socks
+
+- Update package lists
+```
+$ sudo apt update
+```
+
+- Install tor package
+```
+$ sudo apt install tor
+```
+
+- Start Tor service
+```
+$ sudo service tor start
+```
+
+- Verify installation status
+```
+$ sudo service tor status
+```
+# :books: Tutorial :
+
+### Install using pip
+
+```
+$ pip install dark-web-scraper
+```
+
+#### 1. Find onion urls from a dark web link
+
+- Request : ```find_onion_links( str )```
+- Response: links will be saved in `result.txt`
+- Example :
+```Python
+# Main.py
+
+from dark_web_scraper import find_onion_links
+find_onion_links('http://random_url.onion')
+```
+
+#### 2. Scrape images on a dark web link
+
+- Request : ```find_images_from_onion_link( str )```
+- Response: links will be saved in `result.txt`
+- Example :
+```Python
+# Main.py
+
+from dark_web_scraper import find_images_from_onion_link
+find_images_from_onion_link('http://random_url.onion')
+```
+
+<div style="background-color: #f8d7da; color: #721c24; padding: 10px;">
+  <strong>Warning:</strong> This is a warning message. Pay attention to the important information you see here.
+</div>
+
+
+
+## :rocket: Features to be added :
 - [ ] Scraping videos from dark web sites
 - [ ] Object detection in images
 - [ ] Sentiment aAnalysis on the webpage contents
+
+
+## :warning: Disclaimer:
+
+- I don't promote illegality.
+- This project is just for educational purposes only/
+
 
