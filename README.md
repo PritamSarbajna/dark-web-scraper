@@ -90,12 +90,6 @@ from dark_web_scraper import find_images_from_onion_link
 find_images_from_onion_link('http://random_url.onion')
 ```
 
-<div style="background-color: #f8d7da; color: #721c24; padding: 10px;">
-  <strong>Warning:</strong> This is a warning message. Pay attention to the important information you see here.
-</div>
-
-
-
 ## :rocket: Features to be added :
 - [ ] Scraping videos from dark web sites
 - [ ] Object detection in images
