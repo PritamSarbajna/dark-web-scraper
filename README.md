@@ -91,7 +91,8 @@ find_images_from_onion_link('http://random_url.onion')
 ```
 
 ## :rocket: Features to be added :
-- [ ] Scraping videos from dark web sites
+- [ ] Language Detection
+- [ ] Language translation
 - [ ] Object detection in images
 - [ ] Sentiment aAnalysis on the webpage contents
 
