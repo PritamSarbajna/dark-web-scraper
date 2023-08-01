@@ -6,6 +6,9 @@ import requests
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 from urllib.parse import urljoin, unquote
+from langdetect import detect
+from langcodes import Language
+
 
 proxies = {
     'http': 'socks5h://localhost:9050',
@@ -13,8 +16,6 @@ proxies = {
 }
 
 headers = { 'User-Agent': UserAgent().random }
-
-url = ''
 
 
 
@@ -28,7 +29,7 @@ def find_onion_links(url):
     # Regular expression to match words with the last string as ".onion"
     pattern = r"\b\w+\.onion\b"
 
-    # Find all matches in the HTML response
+    # Find matches in the HTML response
     matches = re.findall(pattern, text_content)
 
     with open('result.txt', 'w') as file:
@@ -46,7 +47,7 @@ def find_images_from_onion_link(url):
 
     image_tags = soup.find_all('img')
 
-    # Create a directory to save the images
+    # Directory to save the images
     if not os.path.exists('static/images'):
         os.makedirs('static/images')
 
@@ -55,7 +56,7 @@ def find_images_from_onion_link(url):
         try:
             img_url = image_tag['src']
 
-            # Skip the image if it's an SVG data URI
+            # Skip the image if it's a SVG
             if img_url.startswith('data:image/svg+xml'):
                 continue
 
@@ -66,10 +67,11 @@ def find_images_from_onion_link(url):
             # Get a random filename in hexadecimal format
             filename = secrets.token_hex(8) + '.jpg'
 
-            # Download the image and save it to the directory
+            # Download the image
             res = requests.get(img_url, proxies=proxies, headers=headers)
             res.raise_for_status()
-
+            
+            # Save the file
             with open(os.path.join('static/images', filename), 'wb') as f:
                 f.write(res.content)
 
@@ -78,3 +80,21 @@ def find_images_from_onion_link(url):
         except Exception as e:
             print('Error downloading image:', str(e))
 
+
+
+def detect_onion_link_language(url):
+    response = requests.get(url, headers=headers, proxies=proxies)
+    # Detect the language code
+    lang_code = detect(response.text)
+    # Convert the language code to readable format
+    return Language(lang_code).display_name()
+
+
+def is_onion_site_valid(url):
+    response = requests.get(url, headers=headers, proxies=proxies)
+    
+    # Checking if the site is working properly
+    if response.status_code == 200:
+        return True
+    else:
+        return False

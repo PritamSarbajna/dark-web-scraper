@@ -101,9 +101,9 @@ find_images_from_onion_link('http://random_url.onion')
 
 ## :rocket: Features to be added :
 
-- [ ] Language Detection
+- [x] ~~Language Detection~~
 - [ ] Language translation
-- [ ] Onion link validator
+- [x] ~~Onion link validator~~
 - [ ] Object detection in images
 - [ ] Named entity recognition
 - [ ] Search specific keywords in a list of urls

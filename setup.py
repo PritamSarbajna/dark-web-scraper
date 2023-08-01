@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='dark_web_scraper',
-    version='0.3',
+    version='0.0.4',
     description='A dark web link and image scraper',
     author= 'Pritam Sarbajna',
     url = 'https://github.com/PritamSarbajna/dark-web-scraper',
@@ -25,6 +25,9 @@ setup(
     install_requires = [
         'requests',
         'fake-useragent',
-        'beautifulsoup4'
+        'beautifulsoup4',
+        'langdetect',
+        'langcodes',
+        'language_data'
     ]
 )

@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/dark_web_scraper.py
+src/drk_web_scraper.egg-info/PKG-INFO
+src/drk_web_scraper.egg-info/SOURCES.txt
+src/drk_web_scraper.egg-info/dependency_links.txt
+src/drk_web_scraper.egg-info/requires.txt
+src/drk_web_scraper.egg-info/top_level.txt
