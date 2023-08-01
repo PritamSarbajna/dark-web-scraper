@@ -103,6 +103,7 @@ find_images_from_onion_link('http://random_url.onion')
 
 - [ ] Language Detection
 - [ ] Language translation
+- [ ] Onion link validator
 - [ ] Object detection in images
 - [ ] Named entity recognition
 - [ ] Search specific keywords in a list of urls
