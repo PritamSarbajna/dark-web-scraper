@@ -94,7 +94,7 @@ find_images_from_onion_link('http://random_url.onion')
 - [ ] Language Detection
 - [ ] Language translation
 - [ ] Object detection in images
-- [ ] Search specific keywords
+- [ ] Search specific keywords in a list of urls
 - [ ] Sentiment aAnalysis on the webpage contents
 
 
