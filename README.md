@@ -30,7 +30,16 @@
 Currently this is only designed to
 - Scrape dark web for onion links
 - Scrape images from dark web
+  
 **Without tor browser**
+
+
+## :sparkles: Unique Features :
+
+- Instead of using TOR browser, Using tor proxy
+- Randomized IP address for anonymity
+- Spoofing user agent to avoid getting tracked
+
 
 ## :wrench: Current Dependencies:
 - Linux [ used debian based distro ]
@@ -81,7 +90,7 @@ find_onion_links('http://random_url.onion')
 #### 2. Scrape images on a dark web link
 
 - Request : ```find_images_from_onion_link( str )```
-- Response: links will be saved in `result.txt`
+- Response: Images will be saved in `/static/images`
 - Example :
 ```Python
 # Main.py
@@ -91,9 +100,11 @@ find_images_from_onion_link('http://random_url.onion')
 ```
 
 ## :rocket: Features to be added :
+
 - [ ] Language Detection
 - [ ] Language translation
 - [ ] Object detection in images
+- [ ] Named entity recognition
 - [ ] Search specific keywords in a list of urls
 - [ ] Sentiment aAnalysis on the webpage contents
 
