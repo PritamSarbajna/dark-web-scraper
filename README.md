@@ -99,6 +99,30 @@ from dark_web_scraper import find_images_from_onion_link
 find_images_from_onion_link('http://random_url.onion')
 ```
 
+#### 3. Check language of a dark web link
+
+- Request : ```detect_onion_link_language( str )```
+- Response: Gives back the result as the language name
+- Example :
+```Python
+# Main.py
+
+from dark_web_scraper import detect_onion_link_language
+detect_onion_link_language('http://random_url.onion')
+```
+
+#### 4. Check if a onion link is valid or not
+
+- Request : ```is_onion_site_valid( str )```
+- Response: gives response as True or False
+- Example :
+```Python
+# Main.py
+
+from dark_web_scraper import is_onion_site_valid
+is_onion_site_valid('http://random_url.onion')
+```
+
 ## :rocket: Features to be added :
 
 - [x] ~~Language Detection~~
