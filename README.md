@@ -113,6 +113,6 @@ find_images_from_onion_link('http://random_url.onion')
 ## :warning: Disclaimer:
 
 - I don't promote illegality.
-- This project is just for educational purposes only/
+- This project is just for educational purposes only
 
 
