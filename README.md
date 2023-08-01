@@ -30,6 +30,8 @@
 Currently this is only designed to
 - Scrape dark web for onion links
 - Scrape images from dark web
+- Check language of a dark web link
+- Check if a onion link is valid or not
   
 **Without tor browser**
 
